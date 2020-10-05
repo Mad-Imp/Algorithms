@@ -5,9 +5,8 @@ let count = someArr.length - 1;
 for (let i = 0, k = 0; i < count; count--) {
 	for (let j = 0; j < count; j++) {
 		if (someArr[j] > someArr[j + 1]) {
-			let temp = someArr[j];
-			someArr[j] = someArr[j + 1];
-			someArr[j + 1] = temp;
+
+			[someArr[j], someArr[j + 1]] = [someArr[j + 1], someArr[j]];
 			k++;
 		}
 	}
